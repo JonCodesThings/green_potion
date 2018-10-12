@@ -5,6 +5,8 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 	public float speed_mod;
+	public float jump_mod;
+	public float max_speed;
 
 	private Rigidbody2D body;
 	private ContactPoint2D[] body_contacts = new ContactPoint2D[4];
@@ -41,10 +43,13 @@ public class Player : MonoBehaviour {
 
 		if (on_ground && axis_y != 0.0f)
 		{
-			acc.y = axis_y * speed_mod;
+			acc.y = 1.0f * jump_mod;
 			on_ground = false;
 		}
 
-		body.AddForce(acc * speed_mod);
+		if (body.velocity.x < max_speed || body.velocity.x > -max_speed)
+			body.AddForce(acc * speed_mod);
+		else if (body.velocity.x > max_speed || body.velocity.x < -max_speed)
+			body.velocity = new Vector2(max_speed, 0.0f);
 	}
 }
