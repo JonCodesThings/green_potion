@@ -17,9 +17,9 @@ public class Player : MonoBehaviour {
 		body = GetComponent<Rigidbody2D>();
 		on_ground = false;
 	}
-	
-	// Update is called once per frame
-	void Update () {
+
+    // Update is called once per frame
+    void Update () {
 		
 	}
 
