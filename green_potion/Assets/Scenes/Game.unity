@@ -285,7 +285,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed_mod: 10
-  jump_mod: 25
+  jump_mod: 10
   max_speed: 1.5
 --- !u!4 &1255408404 stripped
 Transform:
@@ -523,12 +523,12 @@ Prefab:
     - target: {fileID: 61580145757415196, guid: 7a2d5c31043384ec2a967eb7092a7cc4,
         type: 2}
       propertyPath: m_Size.x
-      value: 0.9
+      value: 0.95
       objectReference: {fileID: 0}
     - target: {fileID: 61580145757415196, guid: 7a2d5c31043384ec2a967eb7092a7cc4,
         type: 2}
       propertyPath: m_Size.y
-      value: 0.9
+      value: 0.95
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7a2d5c31043384ec2a967eb7092a7cc4, type: 2}
